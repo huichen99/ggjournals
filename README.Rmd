@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The `ggjournals` package provides custom ggplot2 themes and color palettes for creating plots that adhere to the style guidelines of various journals, including BMJ, The Lancet, NEJM, and JAMA.
+The `ggjournals` package provides custom ggplot2 themes and color palettes for creating plots that adhere to the styles of various medical journals, including BMJ, The Lancet, NEJM, and JAMA. This package also incorporates the color palettes from the `ggsci` package, which provides a collection of high-quality color palettes inspired by scientific journals.
 
 ## Installation
 
