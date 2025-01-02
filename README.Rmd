@@ -18,37 +18,66 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of ggjournals is to ...
+The `ggjournals` package provides custom ggplot2 themes and color palettes for creating plots that adhere to the style guidelines of various journals, including BMJ, The Lancet, NEJM, and JAMA.
 
 ## Installation
 
-You can install the development version of ggjournals like so:
+You can install the package from GitHub using:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+remotes::install_github("huichen99/ggjournals")
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+### Lancet Theme
 
-```{r example}
+Similarly, you can use the Lancet theme:
+
+```{r example_lancet}
 library(ggjournals)
-## basic example code
+library(ggplot2)
+
+ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point() +
+  theme_lancet()
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+### NEJM Theme
 
-```{r cars}
-summary(cars)
+```{r example_nejm}
+library(ggjournals)
+library(ggplot2)
+
+ggplot(mpg, aes(x = class, y = hwy)) +
+  geom_boxplot() +
+  theme_nejm()
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
+### JAMA Theme
 
-You can also embed plots, for example:
+```{r example_jama}
+library(ggjournals)
+library(ggplot2)
 
-```{r pressure, echo = FALSE}
-plot(pressure)
+ggplot(mpg, aes(x = class, y = hwy)) +
+  geom_boxplot() +
+  theme_jama()
 ```
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+### BMJ Theme
+
+To use the BMJ theme, simply add theme_bmj() to your ggplot2 plot:
+
+```{r example_bmj}
+library(ggjournals)
+library(ggplot2)
+
+ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point() +
+  theme_bmj()
+```
+
+<!-- 
+You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. 
+-->
